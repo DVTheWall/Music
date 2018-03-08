@@ -33,8 +33,8 @@ public class NowPlayingActivity extends BaseActivity implements ATEActivityTheme
     Ad unit ID (Banner): ca-app-pub-4913776057886907/4437982231
     */
     public static String interstitial = "ca-app-pub-1706086769283341/7729432004";
-    private static String banner = "ca-app-pub-4913776057886907/4437982231";
-    private static String native_Ads = "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx";
+    public static String banner = "ca-app-pub-4913776057886907/4437982231";
+    public static String native_Ads = "ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx";
     private LinearLayout linearlayout;
 
     public static void admobBannerCall(Activity activity, LinearLayout linerlayout) {

@@ -27,10 +27,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.afollestad.appthemeengine.ATE;
 import com.afollestad.appthemeengine.Config;
 import com.dazzle.music.R;
+import com.dazzle.music.activities.NowPlayingActivity;
 import com.dazzle.music.utils.ATEUtils;
 import com.dazzle.music.utils.Helpers;
 import com.dazzle.music.utils.PreferencesUtility;
@@ -42,6 +44,8 @@ public class MainFragment extends Fragment {
 
     PreferencesUtility mPreferences;
     ViewPager viewPager;
+
+    private LinearLayout linearlayout;
 
     @Override
     public void onCreate(final Bundle savedInstanceState) {
@@ -56,6 +60,9 @@ public class MainFragment extends Fragment {
 
         Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+
+        linearlayout = (LinearLayout) rootView.findViewById(R.id.unitads);
+        NowPlayingActivity.admobBannerCall(getActivity(), linearlayout);
 
         final ActionBar ab = ((AppCompatActivity) getActivity()).getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.ic_menu);
@@ -74,6 +81,7 @@ public class MainFragment extends Fragment {
         return rootView;
 
     }
+
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {

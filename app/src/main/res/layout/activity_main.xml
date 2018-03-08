@@ -14,7 +14,19 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:menu="@menu/drawer_view" />
+
+        app:menu="@menu/drawer_view">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="21sp"
+            android:layout_gravity="center|bottom"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/colorPrimary"/>
+    </android.support.design.widget.NavigationView>
 
     <!--android:theme="@style/ThemeOverlay.AppCompat.navTheme"-->
 
